@@ -36,6 +36,7 @@ Save Quiz History: Quiz history is saved using IndexedDB so that users can track
 git clone https://github.com/okabhishek88/react-quiz-application.git
 
 cd react-quiz-application
+
 ```
 
 2. Install dependencies: Run the following command to install the necessary dependencies:
