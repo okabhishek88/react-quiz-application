@@ -25,7 +25,7 @@ Save Quiz History: Quiz history is saved using IndexedDB so that users can track
 
 4. Deployment - 
 
-- The application is deployed on Vercel for easy access and real-time updates.
+The application is deployed on Vercel for easy access and real-time updates.
 
 
 ## Steps to Run the Project Locally
