@@ -14,15 +14,13 @@ const Quiz = () => {
     const [savedResults, setSavedResults] = useState([])
     const [userAnswer, setUserAnswer] = useState('')
 
-    // Reset all options
     const resetOptions = () => {
-        const options = document.querySelectorAll(".list li")
+        const options = document.querySelectorAll(".list li, .input-container input")
         options.forEach(option => {
             option.classList.remove("correct", "wrong")
         })
     }
 
-    // Reset the quiz
     const resetQuiz = () => {
         setIndex(0)
         setQuestion(data[0])
@@ -34,25 +32,37 @@ const Quiz = () => {
         setUserAnswer('')
     }
 
-    // Check answers for input-based questions
     const checkAns = (e, ans) => {
         if (lock === false) {
-            if (ans === userAnswer.trim()) {
-                e.target.classList.add("correct")
-                toast.success("Correct Answer!")
-                setLock(true)
-                setScore(score + 1)
-            } else {
-                e.target.classList.add("wrong")
-                toast.error("Wrong Answer!")
-                setLock(true)
+            if (question.answerType === "multipleChoice") {
+                if (ans === question.ans) {
+                    e.target.classList.add("correct")
+                    toast.success("Correct Answer!")
+                    setLock(true)
+                    setScore(score + 1)
+                } else {
+                    e.target.classList.add("wrong")
+                    toast.error("Wrong Answer!")
+                    setLock(true)
+                }
+            } else if (question.answerType === "input") {
+                const inputElement = e.target.previousSibling; // The input field
+                if (userAnswer.trim() === question.ans) {
+                    inputElement.classList.add("correct")
+                    toast.success("Correct Answer!")
+                    setLock(true)
+                    setScore(score + 1)
+                } else {
+                    inputElement.classList.add("wrong")
+                    toast.error("Wrong Answer!")
+                    setLock(true)
+                }
             }
         } else {
             toast.error("You can only select one answer!")
         }
     }
 
-    // Next question
     const next = useCallback(() => {
         resetOptions()
         if (index + 1 === data.length) {
@@ -66,7 +76,6 @@ const Quiz = () => {
         setUserAnswer('')
     }, [index])
 
-    // End Quiz
     const endQuiz = async () => {
         const db = await openDatabase()
         const result = {
@@ -84,7 +93,6 @@ const Quiz = () => {
         }
     };
 
-    // Fetch saved results
     const fetchSavedResults = async () => {
         const db = await openDatabase()
         try {
@@ -95,7 +103,6 @@ const Quiz = () => {
         }
     };
 
-    // Timer
     useEffect(() => {
         if (timeLeft === 0) {
             next()
@@ -103,13 +110,11 @@ const Quiz = () => {
             const timer = setInterval(() => {
                 setTimeLeft(prevTime => prevTime - 1)
             }, 1000)
-
             return () => clearInterval(timer)
         }
     }, [timeLeft, next])
 
     return (
-        // conditional rendering
         <div className="quiz-container">
             <h1>Quiz Application</h1>
             <hr />
@@ -132,12 +137,17 @@ const Quiz = () => {
                                     <li onClick={(e) => checkAns(e, question.option4)}>{question.option4}</li>
                                 </>
                             ) : (
-                                <input
-                                    type="text"
-                                    value={userAnswer}
-                                    onChange={(e) => setUserAnswer(e.target.value)}
-                                    placeholder="Your answer"
-                                />
+                                <div className="input-container">
+                                    <input
+                                        type="text"
+                                        value={userAnswer}
+                                        onChange={(e) => setUserAnswer(e.target.value)}
+                                        placeholder="Your answer"
+                                    />
+                                    <button className="qbtn submit-btn" onClick={(e) => checkAns(e, userAnswer)}>
+                                        Submit
+                                    </button>
+                                </div>
                             )}
                         </ul>
                         <div className="btncontainer">
@@ -148,7 +158,6 @@ const Quiz = () => {
                     </>
             }
 
-            {/* Display saved results */}
             {savedResults.length > 0 && (
                 <div className="saved-results" style={{ marginTop: "20px" }}>
                     <h3>Saved Results:</h3>
@@ -163,7 +172,6 @@ const Quiz = () => {
                 </div>
             )}
 
-            {/* for notifications */}
             <Toaster position="bottom-center" reverseOrder={false} />
         </div>
     )
