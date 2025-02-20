@@ -1,0 +1,137 @@
+.quiz-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #343a40, #495057);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.quiz-container>* {
+    font-family: Poppins, sans-serif;
+    color: #b0b0b0;
+}
+
+.quiz-container>h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding: 1rem;
+    border: 1px solid #b0b0b0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.list li:hover {
+    background: #b0b0b0;
+    color: #000000;
+    border: 1px solid #b0b0b0;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.quiz-container .qbtn {
+    font-family: Poppins, sans-serif;
+    color: #b0b0b0;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #343a40, #495057);
+    border: 1px solid #b0b0b0;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    width: 250px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-container .qbtn:hover {
+    background: #b0b0b0;
+    color: #000000;
+    transform: scale(1.02);
+    font-weight: bold;
+}
+
+.btncontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.index {
+    margin: 0 auto;
+}
+
+.quiz-container .list li.correct {
+    border: 2px solid #00d397;
+}
+
+.quiz-container .list li.wrong {
+    border: 2px solid #ff0000;
+}
+
+.saved-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #b0b0b0;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* Input-based question styling */
+.quiz-container input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+    background-color: #495057;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.quiz-container input[type="text"]:focus {
+    outline: none;
+    border-color: #495057;
+}
+
+.quiz-container input[type="text"]::placeholder {
+    color: #ccc;
+}
+
+@media (max-width: 600px) {
+    .quiz-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .quiz-container>h1 {
+        font-size: 2rem;
+    }
+
+    .list li {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .quiz-container .qbtn {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .saved-results {
+        padding: 0.8rem;
+    }
+}

@@ -1,0 +1,82 @@
+/* Main container for instructions page */
+.instructions-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #343a40, #495057);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.instructions-container>* {
+    font-family: Poppins, sans-serif;
+    color: #b0b0b0;
+}
+
+.instructions-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.instructions-content {
+    font-size: 1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.instructions-content ol {
+    padding-left: 20px;
+}
+
+.instructions-content li {
+    margin-bottom: 10px;
+}
+
+.start-quiz-btn {
+    font-family: Poppins, sans-serif;
+    color: #b0b0b0;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #343a40, #495057);
+    border: 1px solid #b0b0b0;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    width: 250px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-quiz-btn:hover {
+    background: #b0b0b0;
+    color: #000000;
+    transform: scale(1.02);
+    font-weight: bold;
+}
+
+.instructions-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .instructions-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .instructions-title {
+        font-size: 2rem;
+    }
+
+    .start-quiz-btn {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
