@@ -34,6 +34,9 @@ npm run dev
 ```
 The app will now be accessible at [http://localhost:5173/](http://localhost:5173/) 
 
+Check live demo: [https://www.linkedin.com/in/okabhishek88/](https://www.linkedin.com/in/okabhishek88/)
+
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
