@@ -3,29 +3,14 @@
 This is a quiz platform where users can attempt quizzes, receive instant feedback on their answers, and track their progress. The app is built with React and features a variety of functions such as quiz creation, attempt history, instant feedback, and progress tracking.
 
 **#Features:**
-1. Quiz Creation & Management -
 
-A quiz is displayed with a series of questions for the user to answer.
+**Quiz Creation & Management**: A quiz is displayed with a series of questions for the user to answer. Users can attempt the quiz multiple times. Users can view a history of their quiz attempts.
 
-Multiple Attempts: Users can attempt the quiz multiple times.
+**User Interaction**: Users receive immediate feedback after answering a question. Timer-based Quizzes: Each question is time-bound (e.g., 30 seconds per question).
 
-Attempt History: Users can view a history of their quiz attempts.
+**Progress Tracking**: Scoreboard: After completing the quiz, the users will see their final score. Quiz history is saved using IndexedDB so that users can track their past attempts.
 
-2. User Interaction -
-
-Instant Feedback: Users receive immediate feedback after answering a question.
-
-Timer-based Quizzes: Each question is time-bound (e.g., 30 seconds per question).
-
-3. Progress Tracking - 
-
-Scoreboard: After completing the quiz, the users will see their final score.
-
-Save Quiz History: Quiz history is saved using IndexedDB so that users can track their past attempts.
-
-4. Deployment - 
-
-The application is deployed on Vercel for easy access and real-time updates.
+**Deployment**: The application is deployed on Vercel for easy access and real-time updates.
 
 
 ## Steps to Run the Project Locally
@@ -34,8 +19,6 @@ The application is deployed on Vercel for easy access and real-time updates.
 
 ```bash
 git clone https://github.com/okabhishek88/react-quiz-application.git
-
-cd react-quiz-application
 
 ```
 
