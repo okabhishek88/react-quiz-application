@@ -1,45 +1,33 @@
-# React Quiz Application
+# 🚀 React Quiz Application 🧠
 
-This is a quiz platform where users can attempt quizzes, receive instant feedback on their answers, and track their progress. The app is built with React and features a variety of functions such as quiz creation, attempt history, instant feedback, and progress tracking.
+## Overview
+The **React Quiz Application** is an interactive platform that allows users to attempt quizzes, receive instant feedback on their answers, and track their progress. Built with **React**, the app offers a smooth, user-friendly experience for quiz creation, attempt history, and progress tracking.
 
-**#Features:**
+---
 
-**Quiz Creation & Management**: A quiz is displayed with a series of questions for the user to answer. Users can attempt the quiz multiple times. Users can view a history of their quiz attempts.
+## Features:
+- **Quiz Creation & Management**: A variety of quizzes with a series of questions are available for users to answer. Users can attempt quizzes multiple times and review their quiz attempt history.
+- **User Interaction**: Immediate feedback is provided after each question, helping users know whether their answers are correct or incorrect.
+- **Timer-based Quizzes**: Each question has a time limit (e.g., 30 seconds) to enhance the challenge.
+- **Progress Tracking**: After completing the quiz, users will see their final score. The app also tracks quiz history using **IndexedDB**, allowing users to view past attempts.
+- **Scoreboard**: Displays the user's score after each quiz attempt to keep track of progress.
+  
+---
 
-**User Interaction**: Users receive immediate feedback after answering a question. Timer-based Quizzes: Each question is time-bound (e.g., 30 seconds per question).
+## 🎯 Live Demo
 
-**Progress Tracking**: Scoreboard: After completing the quiz, the users will see their final score. Quiz history is saved using IndexedDB so that users can track their past attempts.
+Check out the live demo of the **React Quiz Application**:  
+👉 **[Live Demo](https://okabhishek88-react-quiz-application.vercel.app/)**
 
-**Deployment**: The application is deployed on Vercel for easy access and real-time updates.
+---
 
+## 📸 Screenshots
+Here are some screenshots of the Quiz app in action:
 
-## Steps to Run the Project Locally
+![Image](https://github.com/user-attachments/assets/7e130745-abbe-438b-904b-b8db6c6175ab)
 
-1. Clone the repository: Start by cloning the repository to your local machine:
+![Image](https://github.com/user-attachments/assets/208b192a-a569-46ee-ab3a-aa11bdd0a3c4)
 
-```bash
-git clone https://github.com/okabhishek88/react-quiz-application.git
+![Image](https://github.com/user-attachments/assets/3f1551c5-1916-402e-831f-3dd80bbdaa37)
 
-```
-
-2. Install dependencies: Run the following command to install the necessary dependencies:
-
-```bash
-npm install
-```
-
-3. Run the application: After installing the dependencies, you can start the development server:
-```bash
-npm run dev
-```
-The app will now be accessible at [http://localhost:5173/](http://localhost:5173/) 
-
-Check live demo: [https://www.linkedin.com/in/okabhishek88/](https://www.linkedin.com/in/okabhishek88/)
-
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+![Image](https://github.com/user-attachments/assets/be565811-2427-487e-b36e-971730ad836f)
